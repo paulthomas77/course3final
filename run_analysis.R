@@ -43,3 +43,5 @@ groupedcombo<-group_by(mscombo,subject,activity)
 groupsum<-summarize_each(groupedcombo,funs(mean))
 
 write.csv(groupsum, "dataset2.csv")
+write.table(groupsum,"dataset2.txt",row.name=FALSE)
+
